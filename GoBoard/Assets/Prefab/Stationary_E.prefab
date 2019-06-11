@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1628960881
+--- !u!1 &354105389
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1628960887}
-  - component: {fileID: 1628960886}
-  - component: {fileID: 1628960885}
-  - component: {fileID: 1628960882}
-  - component: {fileID: 1628960883}
-  - component: {fileID: 1628960884}
+  - component: {fileID: 354105397}
+  - component: {fileID: 354105396}
+  - component: {fileID: 354105395}
+  - component: {fileID: 354105394}
+  - component: {fileID: 354105393}
+  - component: {fileID: 354105392}
+  - component: {fileID: 354105391}
+  - component: {fileID: 354105390}
   m_Layer: 0
-  m_Name: guard
+  m_Name: Stationary_E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1628960887
+--- !u!4 &354105397
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628960881}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -4}
+  m_GameObject: {fileID: 354105389}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1628960886
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!33 &354105396
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628960881}
+  m_GameObject: {fileID: 354105389}
   m_Mesh: {fileID: 4300000, guid: 03f894ba4546e4000806c71ca4284de6, type: 3}
---- !u!23 &1628960885
+--- !u!23 &354105395
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628960881}
+  m_GameObject: {fileID: 354105389}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,7 +64,7 @@ MeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 03f894ba4546e4000806c71ca4284de6, type: 3}
   - {fileID: 2100002, guid: 03f894ba4546e4000806c71ca4284de6, type: 3}
-  - {fileID: 2100004, guid: 03f894ba4546e4000806c71ca4284de6, type: 3}
+  - {fileID: 2100000, guid: ce2c1c20036b74b46a22974563463ec9, type: 2}
   - {fileID: 2100006, guid: 03f894ba4546e4000806c71ca4284de6, type: 3}
   - {fileID: 2100008, guid: 03f894ba4546e4000806c71ca4284de6, type: 3}
   m_StaticBatchInfo:
@@ -84,13 +86,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1628960882
+--- !u!114 &354105394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628960881}
+  m_GameObject: {fileID: 354105389}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 48173d46e89814d7a8a159ccb03631e0, type: 3}
@@ -100,13 +102,13 @@ MonoBehaviour:
   isMoving: 0
   easeType: 17
   faceDestination: 1
-  moveSpeed: 1.5
+  moveSpeed: 2.5
   rotateTime: 0.5
   iTweenDelay: 0
   finishMovementEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1628960883}
+      - m_Target: {fileID: 354105393}
         m_MethodName: FinishTurn
         m_Mode: 1
         m_Arguments:
@@ -119,28 +121,77 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &1628960883
+  directionToMove: {x: 0, y: 0, z: 2}
+  movementType: 0
+  standTime: 1
+--- !u!114 &354105393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628960881}
+  m_GameObject: {fileID: 354105389}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4cf2fb589b2f463987b7c9068c313a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1628960884
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 354105390}
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &354105392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628960881}
+  m_GameObject: {fileID: 354105389}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6e54e90884924afebf0ac37eab7e9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   directionToSearch: {x: 0, y: 0, z: 2}
+--- !u!114 &354105391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354105389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371e137e1efcd4a4fb4cab183c2dd449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &354105390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354105389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6733f8aaa1d49b6a0a008f03ed36f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offscreenOffset: {x: 0, y: 10, z: 0}
+  deathDelay: 0
+  offscreenDelay: 1
+  iTweenDelay: 0
+  easeType: 11
+  moveTime: 0.7
