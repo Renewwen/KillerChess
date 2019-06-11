@@ -24,6 +24,7 @@ public class Mover : MonoBehaviour
     protected Board m_board;
 
     protected Node m_currentNode;
+    public Node CurrentNode { get { return m_currentNode; } }
 
     public UnityEvent finishMovementEvent;
 
