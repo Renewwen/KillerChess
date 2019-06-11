@@ -133,6 +133,8 @@ public class GameManager : MonoBehaviour
     {
         m_isGameOver = true;
 
+        yield return new WaitForSeconds(1.5f);
+        // invoke loseLovelEvent
         if (loseLevelEvent != null)
         {
             loseLevelEvent.Invoke();
@@ -188,11 +190,24 @@ public class GameManager : MonoBehaviour
         return false;
     }
 
-    public void UpdatTurn()
+    bool AreEnemiesAllDead() 
+    { 
+        foreach (EnemyManager enemy in m_enemies)
+        { 
+            if (!enemy.IsDead)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // switch between Player and Enemy Turns
+    public void UpdateTurn()
     {
         if (m_currentTurn == Turn.Player && m_player != null)
         { 
-            if (m_player.IsTurnComplete)
+            if (m_player.IsTurnComplete && !AreEnemiesAllDead())
             {
                 // switch to EnemyTurn and play enemies
                 PlayEnemyTurn();
@@ -222,7 +237,7 @@ public class GameManager : MonoBehaviour
 
         foreach (EnemyManager enemy in m_enemies)
         { 
-            if (enemy != null)
+            if (enemy != null && !enemy.IsDead)
             {
                 enemy.IsTurnComplete = false;
 
@@ -231,10 +246,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // have all of the enemies completed their turns?
     bool IsEnemyTurnComplete()
     { 
         foreach (EnemyManager enemy in m_enemies)
         { 
+            if (enemy.IsDead)
+            {
+                continue;
+            }
             if (!enemy.IsTurnComplete)
             {
                 return false;
