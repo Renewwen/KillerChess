@@ -71,6 +71,7 @@ public class Node : MonoBehaviour
         }
     }
 
+    // give a list of nodes, return a subset of the list that are neighbors
     public List<Node> FindNeighbors(List<Node> nodes)
     {
         List<Node> nList = new List<Node>();
@@ -78,6 +79,7 @@ public class Node : MonoBehaviour
         foreach (Vector2 dir in Board.directions)
         {
             // using lambda expression
+            // find a neighboring node at the current direction...
             Node foundNeighbor = nodes.Find(n => n.Coordinate == m_coordinate + dir);
 
             if (foundNeighbor != null && !nList.Contains(foundNeighbor))
@@ -86,6 +88,16 @@ public class Node : MonoBehaviour
             }
         }
         return nList;
+    }
+
+    public Node FindNeighborAt(List<Node> nodes, Vector2 dir)
+    {
+        return nodes.Find(n => n.Coordinate == Coordinate + dir);
+    }
+
+    public Node FindNeighborAt(Vector2 dir)
+    {
+        return FindNeighborAt(NeighborNodes, dir);
     }
 
     public void InitNode()

@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 5477ac556bcde47a8803c796c8badbb1
+guid: f9816b0dbc9ee47a4b2611cb05cefbf9
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: arrowMat
+    2100000: lineMat
     2300000: //RootNode
     3300000: //RootNode
-    4300000: arrow
+    4300000: pPrism1
   externalObjects: {}
   materials:
     importMaterials: 1
