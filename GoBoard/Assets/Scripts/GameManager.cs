@@ -262,6 +262,13 @@ public class GameManager : MonoBehaviour
         }
         return true;
     }
+
+    public void changeToNextlevel()
+    {
+        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
+    }
+
 }
 
 
