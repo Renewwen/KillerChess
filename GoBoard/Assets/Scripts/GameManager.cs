@@ -269,6 +269,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    public void goBackToMainScreen()
+    {
+        var currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(0);
+    }
+
 }
 
 
