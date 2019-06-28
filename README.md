@@ -15,4 +15,5 @@ Enemies positions and behavior will be designed delicately, like a puzzle.
 
 
 How to Play:
+
 Using "W"  "A"   "S"  "D" or “←”，“→”，“↑”，“↓”  to control the moving directions of character.
