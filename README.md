@@ -1,6 +1,6 @@
 # Killer_Chess-Game
 A Unity Game Project: Turn-based strategy game
-- Playable Demo: matrixwayne.itch.io/killer-chess 
+- Playable Demo: http://matrixwayne.itch.io/killer-chess 
 - Utilize C# and Unity 3D to script functions and restrictions of the chessboard, the interaction logic between character and enemies, and a series of abilities for some specific enemies.
 - Created and adjusted the characters and scene modelings by using Maya, and use iTween to set animations.
 - Playtested by a bunch of people on the Boston Game Expo and get overwhelmingly positive feedback. 
